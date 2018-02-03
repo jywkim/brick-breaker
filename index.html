@@ -13,6 +13,18 @@
     <canvas id="myCanvas" width="500" height="350"></canvas>
 
     <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+
+      function draw() {
+        ctx.beginPath();
+        ctx.arc(50, 50, 10, 0, Math.PI*2);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      setInterval(draw, 10);
 
     </script>
 
