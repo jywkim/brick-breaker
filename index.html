@@ -72,6 +72,10 @@
                 dy = -dy;
                 b.status = 0;
                 score++;
+                if(score == brickRowCount*brickColumnCount) {
+                  alert("You stay winning!");
+                  document.location.reload();
+                }
               }
             }
           }
