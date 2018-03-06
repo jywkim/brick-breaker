@@ -106,7 +106,84 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "white";
+        if (c == 0 && r == 0)
+          ctx.fillStyle = "#9fc30d";
+        if (c == 0 && r == 1)
+          ctx.fillStyle = "#d13d42";
+        if (c == 0 && r == 2)
+          ctx.fillStyle = "#1bf839";
+        if (c == 0 && r == 3)
+          ctx.fillStyle = "#6776ef";
+        if (c == 0 && r == 4)
+          ctx.fillStyle = "#d13e9e";
+        if (c == 0 && r == 5)
+          ctx.fillStyle = "#339ca6";
+
+        if (c == 1 && r == 0)
+          ctx.fillStyle = "#43f7ac";
+        if (c == 1 && r == 1)
+          ctx.fillStyle = "#8b97b5";
+        if (c == 1 && r == 2)
+          ctx.fillStyle = "#0f2aa5";
+        if (c == 1 && r == 3)
+          ctx.fillStyle = "#16c7b9";
+        if (c == 1 && r == 4)
+          ctx.fillStyle = "#9a02fc";
+        if (c == 1 && r == 5)
+          ctx.fillStyle = "#74c11c";
+
+        if (c == 2 && r == 0)
+          ctx.fillStyle = "#eb4fe3";
+        if (c == 2 && r == 1)
+          ctx.fillStyle = "#a0745e";
+        if (c == 2 && r == 2)
+          ctx.fillStyle = "#c44240";
+        if (c == 2 && r == 3)
+          ctx.fillStyle = "#22c31f";
+        if (c == 2 && r == 4)
+          ctx.fillStyle = "#13abdf";
+        if (c == 2 && r == 5)
+          ctx.fillStyle = "#61cb89";
+
+        if (c == 3 && r == 0)
+          ctx.fillStyle = "#e29a33";
+        if (c == 3 && r == 1)
+          ctx.fillStyle = "#269b9c";
+        if (c == 3 && r == 2)
+          ctx.fillStyle = "#b92b12";
+        if (c == 3 && r == 3)
+          ctx.fillStyle = "#212c5c";
+        if (c == 3 && r == 4)
+          ctx.fillStyle = "#ca60d3";
+        if (c == 3 && r == 5)
+          ctx.fillStyle = "#e1c015";
+
+        if (c == 4 && r == 0)
+          ctx.fillStyle = "#fb6929";
+        if (c == 4 && r == 1)
+          ctx.fillStyle = "#56ee0f";
+        if (c == 4 && r == 2)
+          ctx.fillStyle = "#85156e";
+        if (c == 4 && r == 3)
+          ctx.fillStyle = "#177766";
+        if (c == 4 && r == 4)
+          ctx.fillStyle = "#75e36d";
+        if (c == 4 && r == 5)
+          ctx.fillStyle = "#196af1";
+
+        if (c == 5 && r == 0)
+          ctx.fillStyle = "#d7128b";
+        if (c == 5 && r == 1)
+          ctx.fillStyle = "#a0cb2b";
+        if (c == 5 && r == 2)
+          ctx.fillStyle = "#ff9331";
+        if (c == 5 && r == 3)
+          ctx.fillStyle = "#adaff4";
+        if (c == 5 && r == 4)
+          ctx.fillStyle = "#c509de";
+        if (c == 5 && r == 5)
+          ctx.fillStyle = "#ccc8fa";
+
         ctx.fill();
         ctx.closePath();
       }
