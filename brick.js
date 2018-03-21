@@ -106,60 +106,15 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        var r0 = (r == 0);
-        var r1 = (r == 1);
-        var r2 = (r == 2);
-        var r3 = (r == 3);
-        var r4 = (r == 4);
-        var r5 = (r == 5);
-        if (c == 0) {
-          if (r0) ctx.fillStyle = "#9fc30d";
-          if (r1) ctx.fillStyle = "#d13d42";
-          if (r2) ctx.fillStyle = "#1bf839";
-          if (r3) ctx.fillStyle = "#6776ef";
-          if (r4) ctx.fillStyle = "#d13e9e";
-          if (r5) ctx.fillStyle = "#339ca6";
-        }
-        if (c == 1) {
-          if (r0) ctx.fillStyle = "#43f7ac";
-          if (r1) ctx.fillStyle = "#8b97b5";
-          if (r2) ctx.fillStyle = "#0f2aa5";
-          if (r3) ctx.fillStyle = "#16c7b9";
-          if (r4) ctx.fillStyle = "#9a02fc";
-          if (r5) ctx.fillStyle = "#74c11c";
-        }
-        if (c == 2) {
-          if (r0) ctx.fillStyle = "#eb4fe3";
-          if (r1) ctx.fillStyle = "#a0745e";
-          if (r2) ctx.fillStyle = "#c44240";
-          if (r3) ctx.fillStyle = "#22c31f";
-          if (r4) ctx.fillStyle = "#13abdf";
-          if (r5) ctx.fillStyle = "#61cb89";
-        }
-        if (c == 3) {
-          if (r0) ctx.fillStyle = "#e29a33";
-          if (r1) ctx.fillStyle = "#269b9c";
-          if (r2) ctx.fillStyle = "#b92b12";
-          if (r3) ctx.fillStyle = "#212c5c";
-          if (r4) ctx.fillStyle = "#ca60d3";
-          if (r5) ctx.fillStyle = "#e1c015";
-        }
-        if (c == 4) {
-          if (r0) ctx.fillStyle = "#fb6929";
-          if (r1) ctx.fillStyle = "#56ee0f";
-          if (r2) ctx.fillStyle = "#85156e";
-          if (r3) ctx.fillStyle = "#177766";
-          if (r4) ctx.fillStyle = "#75e36d";
-          if (r5) ctx.fillStyle = "#196af1";
-        }
-        if (c == 5) {
-          if (r0) ctx.fillStyle = "#d7128b";
-          if (r1) ctx.fillStyle = "#a0cb2b";
-          if (r2) ctx.fillStyle = "#ff9331";
-          if (r3) ctx.fillStyle = "#adaff4";
-          if (r4) ctx.fillStyle = "#c509de";
-          if (r5) ctx.fillStyle = "#ccc8fa";
-        }
+        var fillStyle = [
+          ["#9fc30d", "#d13d42", "#1bf839", "#6776ef", "#d13e9e", "#339ca6"],
+          ["#43f7ac", "#8b97b5", "#0f2aa5", "#16c7b9", "#9a02fc", "#74c11c"],
+          ["#eb4fe3", "#a0745e", "#c44240", "#22c31f", "#13abdf", "#61cb89"],
+          ["#e29a33", "#269b9c", "#b92b12", "#212c5c", "#ca60d3", "#e1c015"],
+          ["#fb6929", "#56ee0f", "#85156e", "#177766", "#75e36d", "#196af1"],
+          ["#d7128b", "#a0cb2b", "#ff9331", "#adaff4", "#c509de", "#ccc8fa"],
+        ];
+        ctx.fillStyle = fillStyle[c][r];
         ctx.fill();
         ctx.closePath();
       }
